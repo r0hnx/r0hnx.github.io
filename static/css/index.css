@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    transition: background-color 550ms linear;
+    max-height: 100%;
+    /* height: 100%; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+div.header>h2,
+div.header>h4,
+p.social>img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+div.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    height: 100%;
+    /* padding: 5vh 2.5vw; */
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card {
+    z-index: -1;
+    width: 100%;
+    max-height: 100%;
+    /* box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5); */
+    /* border-radius: 10px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: static;
+    overflow: hidden;
+    /*   -webkit-filter: contrast(20);
+      filter: contrast(20); */
+}
+
+.card>.blob {
+    z-index: -1;
+    background: #85def2;
+    height: 25%;
+    width: 12.5%;
+    border-radius: 100%;
+    filter: blur(15px);
+    /*   mix-blend-mode: multiply; */
+    /*   mix-blend-mode: color; */
+    position: absolute;
+}
+
+.content {
+    user-select: none;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    position: absolute;
+    padding: 50px;
+    top: 0;
+    left: 0;
+    margin: 0 50px;
+}
+
+
+/* pro */
+div.navbar>div>h2>span {
+    border: 2px solid #FFD700;
+    border-radius: 100px;
+    font-size: x-small;
+    padding: 3px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    mix-blend-mode: difference;
+    color: #FFD700;
+}
+
+/* profile picture */
+.right-content>img {
+    cursor: pointer;
+    border-radius: 100%;
+    height: 325px;
+    width: 325px;
+    border: 2px solid #00000020;
+    box-shadow: 2px 2px 10px #00000025;
+    backdrop-filter: blur(50px);
+    transition-duration: 550ms;
+    transition-timing-function: ease-in-out;
+}
+
+.right-content>img:hover {
+    background-color: #00000020;
+    backdrop-filter: blur(80px);
+    transition-duration: 550ms;
+    transition-timing-function: ease-in-out;
+}
+
+.navbar {
+    display: flex;
+}
+
+.footer {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+span#green {
+    color: #008800;
+    mix-blend-mode: difference;
+}
+
+.apps {
+    display: flex;
+    flex: 1 1 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app {
+    cursor: pointer;
+    backdrop-filter: blur(50px);
+    text-decoration: none;
+    background-color: #00000005;
+    border: 2px solid #00000005;
+    box-shadow: 2px 2px 5px #00000025;
+    text-transform: lowercase;
+    /* color: #444; */
+    /* margin-bottom: 25px; */
+    margin: 0 10px 25px 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    flex-wrap: nowrap;
+    transition-duration: 550ms;
+    transition-timing-function: ease-in-out;
+}
+
+.app:hover {
+    transition-duration: 550ms;
+    transition-timing-function: ease-in-out;
+    background-color: #00000020;
+    border: 2px solid #00000020;
+}
+
+.hero {
+    margin: 50px 0 100px 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .left-content>p {
+        font-size: small;
+        margin: 25px 0 0 0;
+    }
+
+    .right-content>img {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 25px;
+    }
+
+    .hero {
+        margin: 0 0 30px 0;
+        display: flex;
+        padding-top: 75px;
+        padding-bottom: 25px;
+        font-size: large;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+        flex-wrap: wrap-reverse;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .apps {
+        flex-direction: column;
+    }
+
+    .app {
+        height: 250px;
+        width: 250px;
+    }
+
+    .content {
+        margin: 0 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .left-content>p {
+        font-size: small;
+        margin: 25px 0 0 0;
+    }
+
+    .right-content>img {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 25px;
+    }
+
+    .hero {
+        margin: 0 0 30px 0;
+        display: flex;
+        padding-top: 75px;
+        padding-bottom: 25px;
+        font-size: x-large;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+        flex-wrap: wrap-reverse;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .apps {
+        flex-direction: column;
+    }
+
+    .app {
+        height: 250px;
+        width: 250px;
+    }
+
+    .content {
+        margin: 0 10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .left-content>p {
+        font-size: medium;
+        margin: 25px 50px 0 0;
+    }
+
+    .hero {
+        font-size: large;
+    }
+
+    .right-content>img {
+        height: 275px;
+        width: 275px;
+    }
+
+    .hero {
+        display: flex;
+        padding-top: 50px;
+        padding-bottom: 25px;
+        font-size: x-large;
+        text-align: start;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .apps {
+        flex-direction: row;
+    }
+
+    .app {
+        height: 200px;
+        width: 200px;
+    }
+
+    .content {
+        margin: 0 50px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .hero {
+        font-size: xx-large;
+    }
+
+    .right-content>img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .app {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .hero {
+        font-size: xx-large;
+    }
+
+    .right-content>img {
+        height: 325px;
+        width: 325px;
+    }
+
+    .app {
+        height: 200px;
+        width: 200px;
+    }
+}
